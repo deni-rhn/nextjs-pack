@@ -1,15 +1,15 @@
 import Link from 'next/link'
-import Layout from '../components/Layout'
+import { Fragment } from 'react'
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
+  <Fragment>
     <h1>Hello Next.js 👋</h1>
     <p>
-      <Link href="/about">
-        <a>About</a>
+      <Link href="/statistic">
+        <a>Statistic</a>
       </Link>
     </p>
-  </Layout>
-)
+  </Fragment>
+);
 
 export default IndexPage
