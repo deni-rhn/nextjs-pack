@@ -1,45 +1,42 @@
-# TypeScript Next.js example
+# TypeScript Next.js SSR
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+Server Side Rendering boilerplate using Next.js with TypeScript.
 
-## Deploy your own
+### Run the projects
 
-Deploy the example using [Vercel](https://vercel.com):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
-
-## How to use it?
-
-### Using `create-next-app`
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
-```
-
-### Download manually
-
-Download the example:
-
-```bash
-curl https://codeload.github.com/vercel/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-typescript
-cd with-typescript
-```
-
-Install it and run:
+Install it and run development mode:
 
 ```bash
 npm install
+npm build
 npm run dev
 # or
 yarn
+yarn build
 yarn dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Install it and run production mode:
+
+```bash
+npm install
+npm build
+npm run start
+# or
+yarn
+yarn build
+yarn start
+```
+
+## Project Structure
+
+`$ components` : to save our component such as button, grid layout, table, etc.
+`$ containers` : to save our UI layouts such as profile, register, login, etc.
+`$ helpers` : to save our constant such as datetime format, default value, etc.
+`$ interfaces` : to save our interfaces.
+`$ libraries` : to save our API Class to communicate with endpoint.
+`$ pages` : to save our functionality such as when onChange, calling the API, etc.
+`$ utils` : to save our functionality to interact with backend.
 
 ## Notes
 

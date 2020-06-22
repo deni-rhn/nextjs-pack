@@ -1,0 +1,21 @@
+{
+    "presets": ["next/babel", "@emotion/babel-preset-css-prop"],
+    "env": {
+        "production": {
+            "plugins": ["transform-remove-console"]
+        }
+    },
+    "plugins": [
+        [
+            "emotion",
+            {
+                // sourceMap is on by default but source maps are dead code eliminated in production
+                "sourceMap": true,
+                "autoLabel": true,
+                "labelFormat": "[local]",
+                "cssPropOptimization": true
+            }
+        ]
+    ]
+}
+  
