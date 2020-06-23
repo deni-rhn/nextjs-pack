@@ -1,0 +1,19 @@
+.site-card-wrapper {
+  .ant-row {
+    .ant-col {
+      .ant-card {
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(126,142,177,.12);
+        text-align: center;
+        .ant-card-body {
+          font-size: 3em;
+          color: #D9DAD3;
+          .next_icon {
+            color: #D9DAD3;
+            padding-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}

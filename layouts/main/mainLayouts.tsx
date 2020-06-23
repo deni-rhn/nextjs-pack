@@ -31,7 +31,7 @@ const MainLayouts: React.FC = ({ children }: Props) => {
     return (
         <Fragment>
             <Layout>
-                <Loading show={isLoading} color='#378F3B' showSpinner={false} />
+                <Loading show={isLoading} color='#F26732' showSpinner={false} />
                 <NavBar />
                 <Contents>{children}</Contents>
                 <FooterNav />

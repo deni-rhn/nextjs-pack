@@ -1,14 +1,14 @@
-import Link from 'next/link'
 import { Fragment } from 'react'
+import Home from '@containers/home';
+import Head from 'next/head';
 
 const IndexPage = () => (
   <Fragment>
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/statistic">
-        <a>Statistic</a>
-      </Link>
-    </p>
+    <Head>
+      <title>Home</title>
+    </Head>
+    
+    <Home />
   </Fragment>
 );
 
