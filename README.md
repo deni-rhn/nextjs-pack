@@ -1,4 +1,4 @@
-# TypeScript Next.js SSR
+# TypeScript Next.js + SSR + useSWR
 
 Server Side Rendering boilerplate using Next.js with TypeScript.
 
@@ -27,16 +27,6 @@ yarn
 yarn build
 yarn start
 ```
-
-## Project Structure
-
-`$ components` : to save our component such as button, grid layout, table, etc.
-`$ containers` : to save our UI layouts such as profile, register, login, etc.
-`$ helpers` : to save our constant such as datetime format, default value, etc.
-`$ interfaces` : to save our interfaces.
-`$ libraries` : to save our API Class to communicate with endpoint.
-`$ pages` : to save our functionality such as when onChange, calling the API, etc.
-`$ utils` : to save our functionality to interact with backend.
 
 ## Notes
 
