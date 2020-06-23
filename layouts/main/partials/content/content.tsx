@@ -16,9 +16,9 @@ const Contents = ({ children, page, partials, subPartials }: Props) => {
     return (
         <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
             <Breadcrumb style={{ margin: '16px 0' }}>
-                <Breadcrumb.Item>{page ? page : 'Home'}</Breadcrumb.Item>
-                <Breadcrumb.Item>{partials ? partials : 'Partials'}</Breadcrumb.Item>
-                <Breadcrumb.Item>{subPartials ? subPartials : 'Sub Partials'}</Breadcrumb.Item>
+                <Breadcrumb.Item>{page ? page : 'GRAFIK DATA COVID-19 INDONESIA'}</Breadcrumb.Item>
+                <Breadcrumb.Item>{partials ? partials : ''}</Breadcrumb.Item>
+                <Breadcrumb.Item>{subPartials ? subPartials : ''}</Breadcrumb.Item>
             </Breadcrumb>
             <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
                 {children}

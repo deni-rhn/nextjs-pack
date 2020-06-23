@@ -7,6 +7,8 @@ import {
   HomeOutlined,
   BugOutlined,
   CalendarOutlined,
+  HeartOutlined,
+  GithubOutlined,
 } from '@ant-design/icons';
 export { 
   MailOutlined,
@@ -17,4 +19,6 @@ export {
   HomeOutlined,
   BugOutlined,
   CalendarOutlined,
+  HeartOutlined,
+  GithubOutlined,
 };

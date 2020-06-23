@@ -1,0 +1,35 @@
+export interface IDailyStatistic {
+  harike: number;
+  tanggal: number;
+  jumlahKasusKumulatif: number;
+  jumlahPasienSembuh: number;
+  jumlahPasienMeninggal: number;
+  jumlahpasiendalamperawatan: number;
+  jumlahKasusBaruperHari: number;
+  jumlahKasusSembuhperHari: number;
+  jumlahKasusMeninggalperHari: number;
+  jumlahKasusDirawatperHari: number;
+  persentasePasienSembuh: number;
+  persentasePasienMeninggal: number;
+  persentasePasiendalamPerawatan: number;
+  jumlahSpesimenDiperiksa: number;
+  jumlahKasusDiperiksa: number;
+  jumlahNegatif: number;
+  spesimenDiperiksaBaruHarian: number;
+  kasusDiperiksaBaruHarian: number;
+  pdp: number;
+  odp: number;
+  penambahanKasusTerkonfirmasiTerkini: number;
+  kasusSedangInvestigasiLapangan: number;
+  jumlahSpesimenDiperiksaTerkini: number;
+  jumlahKasusDiperiksaTerkini: number;
+  spesimenDiperiksaBaruHarianTerkini: number;
+  hasilPositifTerkini: number;
+  hasilNegatifTerkini: number;
+  pdpTerkini: number;
+  odpTerkini: number;
+  jumlahProvinsiTerdampak: number;
+  jumlahKabKotTerdampak: number;
+  pembaruanTerakhir: number;
+  fid: number;
+}

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import {
-  BarChart,
+  ComposedChart,
   CartesianGrid,
   XAxis,
   YAxis,
@@ -8,59 +8,33 @@ import {
   Legend,
   Bar,
   ResponsiveContainer,
+  Area,
+  Line,
 } from 'recharts';
+import { barChartParser } from './statistic.parser';
+import { IDailyStatistic } from '@interfaces/idailyStatistic';
 
-const DailyCharts: React.FC = () => {
-  const data = [
-    {
-      "name": "Page A",
-      "uv": 4000,
-      "pv": 2400
-    },
-    {
-      "name": "Page B",
-      "uv": 3000,
-      "pv": 1398
-    },
-    {
-      "name": "Page C",
-      "uv": 2000,
-      "pv": 9800
-    },
-    {
-      "name": "Page D",
-      "uv": 2780,
-      "pv": 3908
-    },
-    {
-      "name": "Page E",
-      "uv": 1890,
-      "pv": 4800
-    },
-    {
-      "name": "Page F",
-      "uv": 2390,
-      "pv": 3800
-    },
-    {
-      "name": "Page G",
-      "uv": 3490,
-      "pv": 4300
-    }
-  ];
+type Props = {
+  dataSource?: IDailyStatistic[];
+}
+
+const DailyCharts = ({ dataSource }: Props) => {
+  const data = barChartParser(dataSource);
 
   return (
     <Fragment>
       <ResponsiveContainer width="100%" height={350}>
-        <BarChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
+        <ComposedChart data={data}>
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="pv" fill="#8884d8" />
-          <Bar dataKey="uv" fill="#82ca9d" />
-        </BarChart>
+          <CartesianGrid stroke="#f5f5f5" />
+          <Line type="monotone" dataKey="sembuh" stroke="#ff7300" />
+          <Bar dataKey="meninggal" fill="#CC2A49" />
+          <Bar dataKey="rawat" fill="#493F10" />
+          <Area type="monotone" dataKey="positif" fill="#8884d8" stroke="#8884d8" />
+        </ComposedChart>
       </ResponsiveContainer>
     </Fragment>
   );

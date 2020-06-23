@@ -6,17 +6,14 @@ import {
   Tooltip,
   Cell,
 } from 'recharts';
+import { randomColors, RADIAN } from '@helpers/helpers';
+import { IProvinceStatistic } from '@interfaces/iprovinceStatistic';
+import { pieChartParser } from './statistic.parser';
 
-const data = [
-  { name: 'Group A', value: 400 },
-  { name: 'Group B', value: 300 },
-  { name: 'Group C', value: 300 },
-  { name: 'Group D', value: 200 },
-];
+type Props = {
+  dataSource?: IProvinceStatistic[];
+}
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
-
-const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({
   cx, cy, midAngle, innerRadius, outerRadius, percent, index,
 }) => {
@@ -25,17 +22,18 @@ const renderCustomizedLabel = ({
   const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
   return (
-    <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+    <text key={index} x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
       {`${(percent * 100).toFixed(0)}%`}
     </text>
   );
 };
 
-const ProvinceChart: React.FC = () => {
+const ProvinceChart = ({ dataSource }: Props) => {
+  const data = pieChartParser(dataSource);
 
   return (
     <Fragment>
-      <div style={{ width: '100%', height: 400 }}>
+      <div style={{ width: '100%', height: 650 }}>
         <ResponsiveContainer>
           <PieChart>
             <Pie
@@ -46,7 +44,7 @@ const ProvinceChart: React.FC = () => {
               dataKey="value"
             >
               {
-                data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
+                dataSource.map((entry, index) => <Cell key={`cell-${index}`} fill={randomColors[index % randomColors.length]} />)
               }
             </Pie>
             <Tooltip />

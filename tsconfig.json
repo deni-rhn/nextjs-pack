@@ -22,7 +22,7 @@
       "@components/*": ["components/*"],
       "@libraries/*": ["libraries/*"],
       "@pages/*": ["pages/*"],
-      "@utils/*": ["utilities/*"],
+      "@utils/*": ["utils/*"],
       "@interfaces/*": ["interfaces/*"],
       "@helpers/*": ["helpers/*"],
       "@containers/*": ["containers/*"],

@@ -1,1 +1,9 @@
-export const defaultValue: string = 'EXAMPLE';
+export const randomColors = ['#E37A41', '#46B39C', '#DE5B49', '#324E5C', '#F0CA4D',
+                '#3F2B37', '#5A4156', '#F59D55', '#F08052', '#C38876',
+                '#3B597C', '#427576', '#3E9A81', '#A1CE73', '#E1E48C',
+                '#493F10', '#A7C334', '#43D8C2', '#F57A58', '#FD9657',
+                '#FB7534', '#FEDF3A', '#BED948', '#2A8970', '#054456',
+                '#1E756F', '#FC8B35', '#37498A', '#161A3B', '#3EB1BD',
+                '#52D9D8', '#572841', '#EF4648', '#F36E38'];
+
+export const RADIAN = Math.PI / 180;
