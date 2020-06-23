@@ -9,7 +9,7 @@ import { IDailyStatistic } from '@interfaces/idailyStatistic';
 const Statistic = () => {
     const { data: caseByProvince } = useSWR(provinceStatisticEndpoint, getProvinceStatistic);
     const { data: dailyCase } = useSWR(dailyStatisticEndpoint, getDailyStatistic);
-    const dailyData: IDailyStatistic[] = dailyCase.slice(Math.max(dailyCase.length - 31, 0));    
+    const dailyData: IDailyStatistic[] = dailyCase ? dailyCase.slice(Math.max(dailyCase.length - 31, 0)) : [];
 
     return(
         <Fragment>
