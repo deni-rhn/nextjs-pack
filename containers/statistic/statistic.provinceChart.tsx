@@ -44,7 +44,10 @@ const ProvinceChart = ({ dataSource }: Props) => {
               dataKey="value"
             >
               {
-                dataSource.map((entry, index) => <Cell key={`cell-${index}`} fill={randomColors[index % randomColors.length]} />)
+                dataSource.map((entry: any, index: number) => {
+                  console.log('entry', entry);
+                  <Cell key={`cell-${index}`} fill={randomColors[index % randomColors.length]} />
+                })
               }
             </Pie>
             <Tooltip />
