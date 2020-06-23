@@ -29,7 +29,7 @@ const renderCustomizedLabel = ({
 };
 
 const ProvinceChart = ({ dataSource }: Props) => {
-  const data = pieChartParser(dataSource);
+  const data = dataSource ? pieChartParser(dataSource) : [];
 
   return (
     <Fragment>
@@ -44,7 +44,7 @@ const ProvinceChart = ({ dataSource }: Props) => {
               dataKey="value"
             >
               {
-                dataSource.map((entry: any, index: number) => {
+                data.map((entry: any, index: number) => {
                   console.log('entry', entry);
                   <Cell key={`cell-${index}`} fill={randomColors[index % randomColors.length]} />
                 })

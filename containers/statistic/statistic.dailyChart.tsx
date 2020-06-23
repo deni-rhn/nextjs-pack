@@ -19,7 +19,7 @@ type Props = {
 }
 
 const DailyCharts = ({ dataSource }: Props) => {
-  const data = barChartParser(dataSource);
+  const data = dataSource ? barChartParser(dataSource) : [];
 
   return (
     <Fragment>
