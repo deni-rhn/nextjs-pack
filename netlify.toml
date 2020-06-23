@@ -1,3 +1,4 @@
 [build]
+  comman = "cp .env.development .env"
   command = "npm run build && npm run export"
   publish = "out"
