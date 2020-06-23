@@ -28,16 +28,6 @@ yarn build
 yarn start
 ```
 
-## Project Structure
-
-`$ components` : to save our component such as button, grid layout, table, etc.
-`$ containers` : to save our UI layouts such as profile, register, login, etc.
-`$ helpers` : to save our constant such as datetime format, default value, etc.
-`$ interfaces` : to save our interfaces.
-`$ libraries` : to save our API Class to communicate with endpoint.
-`$ pages` : to save our functionality such as when onChange, calling the API, etc.
-`$ utils` : to save our functionality to interact with backend.
-
 ## Notes
 
 This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
