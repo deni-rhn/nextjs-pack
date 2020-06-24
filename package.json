@@ -8,7 +8,8 @@
     "start": "NODE_ENV=production node server.js",
     "export": "next export",
     "type-check": "tsc",
-    "format": "prettier --print-width 80 --tab-width 2 --single-quote --write '**/{*.js,*.ts*}'"
+    "format": "prettier --print-width 80 --tab-width 2 --single-quote --write '**/{*.js,*.ts*}'",
+    "test": "jest -u"
   },
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",
@@ -31,14 +32,19 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.10.1",
+    "@testing-library/react": "^10.4.1",
+    "@types/jest": "^26.0.0",
     "@types/node": "^12.12.7",
     "@types/prettier": "^1.19.0",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "babel-plugin-emotion": "^10.0.23",
     "babel-plugin-transform-remove-console": "^6.9.4",
+    "jest": "^26.1.0",
     "nodemon": "^1.19.4",
     "prettier": "^1.19.1",
+    "ts-jest": "^26.1.1",
     "typescript": "^3.7.2"
   },
   "prettier": {
